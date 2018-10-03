@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :activites
   get 'sessions/new'
 
   get '/signup', to: 'users#new'
+  get '/activites', to: 'activite#new'
 
   root 'static_pages#home'
   get  '/help',    to: 'static_pages#help'

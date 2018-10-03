@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @activite.user_id %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @activite.duration %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @activite.description %>
+</p>
+
+<p>
+  <strong>Create at:</strong>
+  <%= @activite.create_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @activite.updated_at %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @activite.approved %>
+</p>
+
+<%= link_to 'Edit', edit_activite_path(@activite) %> |
+<%= link_to 'Back', activites_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Activites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th>Create at</th>
+      <th>Updated at</th>
+      <th>Approved</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activites.each do |activite| %>
+      <tr>
+        <td><%= activite.user_id %></td>
+        <td><%= activite.duration %></td>
+        <td><%= activite.description %></td>
+        <td><%= activite.create_at %></td>
+        <td><%= activite.updated_at %></td>
+        <td><%= activite.approved %></td>
+        <td><%= link_to 'Show', activite %></td>
+        <td><%= link_to 'Edit', edit_activite_path(activite) %></td>
+        <td><%= link_to 'Destroy', activite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activite', new_activite_path %>
